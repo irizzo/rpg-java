@@ -5,7 +5,7 @@ public class RpgCharacter {
 
   protected boolean dead = false;
 
-  // characteristics methods
+  // attributes methods
   protected void setName(String className) {
     this.name = className;
   }
