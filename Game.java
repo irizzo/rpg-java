@@ -8,7 +8,8 @@ public class Game {
     Dice d6 = new Dice(6);
     Dice d20 = new Dice(20);
 
-    int turns = d20.roll();
+    // int turns = d20.roll();
+    int turns = 12;
     int i;
 
     System.out.println("[Game] turns = " + turns);
@@ -16,6 +17,7 @@ public class Game {
     // turnos do jogo
     for (i = 1; i <= turns; i++) {
       System.out.println("[Game] turn = " + i);
+
       int player1Iniciative = player1.rollIniciative();
       int player2Iniciative = player2.rollIniciative();
 
@@ -47,9 +49,21 @@ public class Game {
         }
       }
 
-      player1.getStatus();
-      player2.getStatus();
-      System.out.println("\n \n");
+      // check if any player is dead
+      if (player1.dead) {
+        System.out.println("[Game] " + player1.name + " is dead. Winner: " + player2.name);
+        break;
+
+      } else if (player2.dead) {
+        System.out.println("[Game] " + player2.name + " is dead. Winner: " + player1.name);
+        break;
+
+      } else {
+        // game is still on
+        player1.getStatus();
+        player2.getStatus();
+        System.out.println("\n \n");
+      }
     }
   }
 }
