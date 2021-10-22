@@ -1,9 +1,13 @@
+import Dice.Dice;
+
 public class RpgCharacter {
   protected String name = "";
 
   protected int hp, strength, defense;
 
   protected boolean dead = false;
+
+  Dice d20 = new Dice(20);
 
   // attributes methods
   protected void setName(String className) {
@@ -20,6 +24,19 @@ public class RpgCharacter {
 
   protected void setDefense(int classDefense) {
     this.defense = classDefense;
+  }
+
+  /* actions */
+  // iniciative
+  protected int rollIniciative() {
+    int iniciative = d20.roll();
+    return iniciative;
+  }
+
+  // evasion
+  protected int rollEvasion() {
+    int evasion = d20.roll();
+    return evasion;
   }
 
   // attack method
@@ -45,10 +62,10 @@ public class RpgCharacter {
   // get status
   public void getStatus() {
     if (this.dead) {
-      System.out.println(this.name + " is dead\n");
+      System.out.println(this.name + " is dead.");
 
     } else {
-      System.out.println(this.name + "'s hp is " + this.hp + "\n");
+      System.out.println(this.name + "'s hp is " + this.hp);
     }
   }
 
