@@ -7,13 +7,15 @@ public class RpgCharacter {
 
   public int hp, strength, defense;
 
+  // public String damageType;
+
   public boolean dead = false;
 
   Dice d20 = new Dice(20);
 
   // attributes methods
-  public void setName(String className) {
-    this.name = className;
+  public void setName(String charName) {
+    this.name = charName;
   }
 
   public void setHp(int classHp) {
