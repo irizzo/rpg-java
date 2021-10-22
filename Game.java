@@ -23,7 +23,5 @@ public class Game {
       player1.getStatus();
       player2.getStatus();
     }
-
-    System.out.println(player1.getClass());
   }
 }

@@ -42,6 +42,7 @@ public class RpgCharacter {
     System.out.println(this.name + " was killed by " + killer.name + '\n');
   }
 
+  // get status
   public void getStatus() {
     if (this.dead) {
       System.out.println(this.name + " is dead\n");

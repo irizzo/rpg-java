@@ -3,8 +3,7 @@ public class Witch extends RpgCharacter {
     super(witchName, witchHp, witchStrength, witchDefense);
   };
 
-  // habilidade especial
-  // public static void poise() {
-
+  // special ability: poisioning
+  // public static void poison() {
   // };
 };
