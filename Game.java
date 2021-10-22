@@ -1,3 +1,6 @@
+
+import Characters.Warrior;
+import Characters.Witch;
 import Dice.Dice;
 
 public class Game {

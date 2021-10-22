@@ -1,46 +1,48 @@
+package Characters;
+
 import Dice.Dice;
 
 public class RpgCharacter {
-  protected String name = "";
+  public String name = "";
 
-  protected int hp, strength, defense;
+  public int hp, strength, defense;
 
-  protected boolean dead = false;
+  public boolean dead = false;
 
   Dice d20 = new Dice(20);
 
   // attributes methods
-  protected void setName(String className) {
+  public void setName(String className) {
     this.name = className;
   }
 
-  protected void setHp(int classHp) {
+  public void setHp(int classHp) {
     this.hp = classHp;
   }
 
-  protected void setStrength(int classStrength) {
+  public void setStrength(int classStrength) {
     this.strength = classStrength;
   }
 
-  protected void setDefense(int classDefense) {
+  public void setDefense(int classDefense) {
     this.defense = classDefense;
   }
 
   /* actions */
   // iniciative
-  protected int rollIniciative() {
+  public int rollIniciative() {
     int iniciative = d20.roll();
     return iniciative;
   }
 
   // evasion
-  protected int rollEvasion() {
+  public int rollEvasion() {
     int evasion = d20.roll();
     return evasion;
   }
 
   // attack method
-  protected void attack(RpgCharacter enemy) {
+  public void attack(RpgCharacter enemy) {
     if (!enemy.dead) {
       int damage = this.strength - enemy.defense;
       enemy.hp -= damage;
@@ -54,7 +56,7 @@ public class RpgCharacter {
   }
 
   // die method
-  protected void setDead(RpgCharacter killer) {
+  public void setDead(RpgCharacter killer) {
     this.dead = true;
     System.out.println(this.name + " was killed by " + killer.name + '\n');
   }
