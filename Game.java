@@ -6,7 +6,7 @@ import Dice.Dice;
 public class Game {
   public static void main(String[] args) {
     Witch player1 = new Witch("9Diamantes", 60, 5, 2);
-    Warrior player2 = new Warrior("Comedor", 80, 7, 5);
+    Warrior player2 = new Warrior("DarkKnigth", 80, 7, 5);
 
     Dice d6 = new Dice(6);
 
@@ -60,6 +60,18 @@ public class Game {
         break;
 
       } else {
+        if (player1Iniciative > 15) {
+          System.out.println(player1.name + " uses their special ability!");
+
+          player1.poison(player2);
+        }
+
+        if (player2Iniciative > 15) {
+          System.out.println(player2.name + " uses their special ability!");
+
+          player2.rage(player1);
+        }
+
         // game is still on
         player1.getStatus();
         player2.getStatus();
