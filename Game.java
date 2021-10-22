@@ -6,10 +6,8 @@ public class Game {
     Warrior player2 = new Warrior("Comedor", 80, 7, 5);
 
     Dice d6 = new Dice(6);
-    Dice d20 = new Dice(20);
 
-    // int turns = d20.roll();
-    int turns = 12;
+    int turns = 20;
     int i;
 
     System.out.println("[Game] turns = " + turns);
