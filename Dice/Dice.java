@@ -6,7 +6,7 @@ import java.lang.Math;
 public class Dice {
   public int range;
 
-  protected Random rollDice = new Random();
+  protected static Random rollDice = new Random();
 
   // constructor
   public Dice(int diceRange) {
@@ -18,7 +18,7 @@ public class Dice {
     return result;
   }
 
-  public int rollWithAvantage() {
+  public int rollWithAdvantage() {
     int resultOne = roll();
     int resultTwo = roll();
 
@@ -27,7 +27,7 @@ public class Dice {
     return greater;
   }
 
-  public int rollWithDisavantage() {
+  public int rollWithDisadvantage() {
     int resultOne = roll();
     int resultTwo = roll();
 
