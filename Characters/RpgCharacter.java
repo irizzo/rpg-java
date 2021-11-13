@@ -1,6 +1,6 @@
 package Characters;
 
-import Dice.Dice;
+import Dice.*;
 
 public class RpgCharacter {
   public String name = "";
@@ -11,7 +11,7 @@ public class RpgCharacter {
 
   public boolean dead = false;
 
-  Dice d20 = new Dice(20);
+  Dice d20 = new D20();
 
   // attributes methods
   public void setName(String charName) {

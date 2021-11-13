@@ -1,9 +1,9 @@
 package Characters;
 
-import Dice.Dice;
+import Dice.*;
 
 public class Warrior extends RpgCharacter {
-  Dice d6 = new Dice(6);
+  Dice d6 = new D6();
 
   public Warrior(String warriorName, int warriorHp, int warriorStrength, int warriorDefense) {
     super(warriorName, warriorHp, warriorStrength, warriorDefense);
