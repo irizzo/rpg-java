@@ -1,14 +1,13 @@
-
 import Characters.Warrior;
 import Characters.Witch;
-import Dice.Dice;
+import Dice.*;
 
 public class Game {
   public static void main(String[] args) {
     Witch player1 = new Witch("9Diamantes", 60, 5, 2);
-    Warrior player2 = new Warrior("DarkKnigth", 80, 7, 5);
+    Warrior player2 = new Warrior("DarkKnight", 80, 7, 5);
 
-    Dice d6 = new Dice(6);
+    Dice d6 = new D6();
 
     int turns = 20;
     int i;
@@ -60,6 +59,7 @@ public class Game {
         break;
 
       } else {
+        // game is still on
         if (player1Iniciative > 15) {
           System.out.println(player1.name + " uses their special ability!");
 
@@ -72,7 +72,6 @@ public class Game {
           player2.rage(player1);
         }
 
-        // game is still on
         player1.getStatus();
         player2.getStatus();
         System.out.println("\n \n");
